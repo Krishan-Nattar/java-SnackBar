@@ -1,6 +1,5 @@
 package snackBar;
 
-
 import java.util.*;
 
 public class Snack {
@@ -87,6 +86,5 @@ public class Snack {
             + "Quantity on hand: " + this.quantity + "\n" + 
             "Total cost of current snacks "  + (this.quantity * this.cost);
             System.out.println(returnString);
-
     }
 }
