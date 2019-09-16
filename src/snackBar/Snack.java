@@ -89,13 +89,4 @@ public class Snack {
             System.out.println(returnString);
 
     }
-
-    // @Override
-    // public String toString() {
-    //     String returnString = "Name : " + this.name + "\n" + "Vending Machine Name: " + this.vendingId + "\n"
-    //             + "Quantity on hand: " + this.quantity + "\n" + "Total cost of current snacks "
-    //             + (this.quantity * this.cost);
-    //     return returnString;
-    // }
-
 }
