@@ -1,5 +1,7 @@
-
 package snackBar;
+
+
+import java.util.*;
 
 public class Snack {
 
@@ -68,5 +70,32 @@ public class Snack {
         totalCost = this.cost * quantity;
         return totalCost;
     }
+
+    public void getDetails(Object[] vendingObjects)
+    {
+        String vendName = "";
+        
+            for (int i = 0; i < vendingObjects.length; i++) {
+                if(this.vendingId == ((VendingMachine)vendingObjects[i]).getId())
+                {
+                    vendName = ((VendingMachine)vendingObjects[i]).getName();    
+                }
+            }
+
+            String returnString = "Name : " + this.name + "\n" + 
+            "Vending Machine Name: " + vendName + "\n"
+            + "Quantity on hand: " + this.quantity + "\n" + 
+            "Total cost of current snacks "  + (this.quantity * this.cost);
+            System.out.println(returnString);
+
+    }
+
+    // @Override
+    // public String toString() {
+    //     String returnString = "Name : " + this.name + "\n" + "Vending Machine Name: " + this.vendingId + "\n"
+    //             + "Quantity on hand: " + this.quantity + "\n" + "Total cost of current snacks "
+    //             + (this.quantity * this.cost);
+    //     return returnString;
+    // }
 
 }

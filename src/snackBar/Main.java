@@ -11,7 +11,7 @@ public class Main {
         VendingMachine v2 = new VendingMachine("Drink");
         VendingMachine v3 = new VendingMachine("Office");
 
-        Snack s1 = new Snack("chips", 36, 1.75, v1.getId());
+        Snack s1 = new Snack("Chips", 36, 1.75, v1.getId());
         Snack s2 = new Snack("Chocolate Bar", 36, 1.00, v1.getId());
         Snack s3 = new Snack("Pretzel", 30, 2.00, v1.getId());
 
@@ -62,8 +62,13 @@ public class Main {
         System.out.println(c2.getCash());
         System.out.println(s3.getQuantity());
 
+        //Stretch
+        Object[] vendingObjects = {v1,v2,v3};
+        Object[] snackObjects = {s1,s2,s3,s4,s5};
 
-
+        for (int i = 0; i < snackObjects.length; i++) {
+            ((Snack)snackObjects[i]).getDetails(vendingObjects);
+        }
 
     }
 
