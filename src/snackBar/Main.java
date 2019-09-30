@@ -3,7 +3,6 @@ package snackBar;
 public class Main {
 
     public static void workWithData() {
-        System.out.println("Work With Data Running");
         Customer c1 = new Customer("Jane", 45.25);
         Customer c2 = new Customer("Bob", 33.14);
 
@@ -50,26 +49,24 @@ public class Main {
         System.out.println(c1.getCash());
         System.out.println(s2.getQuantity());
 
-        //Problem 6
+        // Problem 6
         s3.addQuantity(12);
         System.out.println(s3.getQuantity());
 
-
-        //Problem 7
+        // Problem 7
         c2.buyItem(3 * s3.getCost());
         s3.buySnack(3);
 
         System.out.println(c2.getCash());
         System.out.println(s3.getQuantity());
 
-        //Stretch
-        Object[] vendingObjects = {v1,v2,v3};
-        Object[] snackObjects = {s1,s2,s3,s4,s5};
+        // Stretch
+        Object[] vendingObjects = { v1, v2, v3 };
+        Object[] snackObjects = { s1, s2, s3, s4, s5 };
 
         for (int i = 0; i < snackObjects.length; i++) {
-            ((Snack)snackObjects[i]).getDetails(vendingObjects);
+            ((Snack) snackObjects[i]).getDetails(vendingObjects);
         }
-
     }
 
     public static void main(String[] args) {
